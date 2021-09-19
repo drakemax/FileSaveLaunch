@@ -1,0 +1,9 @@
+#, Name___________________________________________,Desc__________________________________________,Ext_,Date______,Project_,Path__________________________________________________________
+1,_HellbentTimer.ahk,AHK script test ,ahk, 2021-09-14,code,C:\Users\drake\Downloads\AHK-Working\_HellbentTimer.ahk
+9,Downloads,downloads,Dir,2021-09-19,g,C:\Users\drake\Downloads,
+10,code clock.html,code clock test,html,2021-09-20-,g,C:\Users\drake\Downloads\0-html\code clock.html,
+11,____________TEMPRUBBISH,Temp files to delete after using ,Dir,2021-09-20,g,C:\Users\drake\Downloads\____________TEMPRUBBISH,
+12,57992_Kingspan_Architectural Wall Panels KS1000 AWP_Datasheet_072019_NZ_EN_LR(1).pdf,kingspan sandwich panel detail,pdf,2021-09-20-,bim,C:\Users\drake\Downloads\__PDF\57992_Kingspan_Architectural Wall Panels KS1000 AWP_Datasheet_072019_NZ_EN_LR(1).pdf,
+13,DHB pop & latLong 20200528.xlsx,DHB populations in NZ,xlsx,2021-09-20-,Data,C:\Users\drake\Downloads\0-excel\DHB pop & latLong 20200528.xlsx,
+14,AutoHotkey_1.1.33.02_setup.exe,AHK setup file version 1 ,exe,2021-09-20-,g,C:\Users\drake\Downloads\___Zip\AutoHotkey_1.1.33.02_setup.exe,
+15,crimes-london202003 ReadMe.txt,Crimes in london time and location police info,txt,2021-09-20-,data,C:\Users\drake\Downloads\0-doc\crimes-london202003 ReadMe.txt,
