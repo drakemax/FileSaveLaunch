@@ -1,6 +1,7 @@
 # FileSaveLaunch
- ###(Winkey + Spacebar) hotkey to open once script/exe file activated  
-This is a AutoHotKey V1 script & compiled .exe file   
+**(Winkey + Spacebar)** hotkey to open once script/exe file activated  
+*This is a AutoHotKey V1 script & compiled .exe file   
+## What it does    
 It allows you to select a file from your PC, add a Comment/Note/Description and saves it to a file.   
 If you use Winkey + Spacebar hotkey it will open a List of stored files that you can click on to open in the program you hacve designated to open its specific extension.   
 eg if you have a .txt file and you've assigned "notepad.exe" as the program to edit that file then when you click on the row of that file it will activate and open it.   
