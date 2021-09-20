@@ -15,13 +15,11 @@ https://www.the-automator.com/easily-pushing-delimited-data-into-a-listview-in-a
 explained in this vid:
 https://www.youtube.com/watch?v=XdHqE6v4Ov8
 
-
 =======================Class_LV_Colors.ahk- AHK-just-me===============================
 For alternate colors in ListView thanks to AHK-just-me for Class_LV_Colors.ahk
 https://github.com/AHK-just-me/Class_LV_Colors
 
 =========================================================================================
-
 
 */
 #NoEnv
@@ -40,7 +38,6 @@ FileListOut= FileSaveLaunchOut.txt
 ; IniFile is for all user inputs for countX, filee extensions and associated programs etc 
 IniFile=FileSaveLaunch.ini 
 
-
 ;The header file for the Data file is below if you delete the original
 ;"#, Name___________________________________________,Desc__________________________________________,Ext_,Date______,Project_,Path__________________________________________________________
 
@@ -56,7 +53,6 @@ Menu, Tray, Add ; adds a separator between
 Menu, Tray, Add, Run "FileSaveLaunch" Win+Space, Refresh_Table
 Menu, Tray, Add ; 
 Menu, Tray, Add, Help for "FileSaveLaunch", FSL_HelpHandler
-
 
 ^#a:: ;select file
 Select_File:
@@ -155,7 +151,6 @@ FSL_HelpHandler:
   Run, https://pir2.tk/index.php/files-save-launch/
 Return
 
-
 ; --------------RUNNING SCRIPT------------
 
 #Space:: ; hotkey to run 
@@ -174,9 +169,9 @@ Refresh_Table:
     IniRead, Txt_Ht, %IniFile%,Gui_Text_Height, Txt_Ht
     IniRead, Button_Width, %IniFile%,Gui_Text_Height, Button_Width
     IniRead, Gui_Colour, %IniFile%,Gui_Table_Colour, Gui_Colour
-
+    IniRead, Gui_Txt_Colour, %IniFile%,Gui_Table_Colour, Gui_Txt_Colour
     colrB= %Gui_Colour% ;0xFFA500 ; 160042 NavyBlue, 6e57d2 purple, FFA500 orange
-    colrT=0xFFFFFF ; white
+    colrT=%Gui_Txt_Colour%
 
     ;--------LOCAL VARIABLES------------
     if FileExist(Data_Source) ;if file exists use it as source
@@ -198,10 +193,8 @@ Refresh_Table:
 
     Gui, Table_View: New,,%Title% ;create new gui window and set title
     Gui, Font, %Txt_Ht% ; height for text font (set in ini file)
-
     Gui, Color, Black ; background colour
     Gui, Add, Text,cWhite , Click on row to select and activate File/Folder, or use button at bottom to select a new file/folder to add to list or Delete a row
-
     Gui, Add, ListView, w%Col_Width% r%dRows% grid gQuickBox hwndHLV, % rowHeader ;set headers
     For Each, Row In data_obj ;add the data lines to the ListView
       LV_Add("", StrSplit(Row, Delimiter)*) ;LV_Add is a variadic function
@@ -246,7 +239,7 @@ QuickBox:
 
   Run, %Program1% "%FPath%" , , UseErrorLevel
   if ErrorLevel = ERROR
-    MsgBox Could not launch the %ExtType% extension file. Perhaps it is not associated with anything?`nPATH:"%FPath%"
+    MsgBox Could not launch the %ExtType% extension file with %Program1%.`n Does File Exist? `n Perhaps it is not associated with anything?`nPATH:"%FPath%"
 
   Gui, Destroy
 return
